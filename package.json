@@ -11,10 +11,18 @@
 	"keywords": [
 		"node",
 		"npm",
-    "kma",
-    "cmcsoft",
-    "iu"
+		"kma",
+		"cmcsoft",
+		"iu"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Haven-Code/CMCSoft-IU-API.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Haven-Code/CMCSoft-IU-API/issues"
+	},
+	"homepage": "https://github.com/Haven-Code/CMCSoft-IU-API",
 	"dependencies": {
 		"axios": "^0.20.0",
 		"axios-cookiejar-support": "^1.0.0",
