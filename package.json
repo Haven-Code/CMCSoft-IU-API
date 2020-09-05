@@ -1,0 +1,27 @@
+{
+	"name": "cmcsoft-iu-api",
+	"version": "1.0.0",
+	"description": "Thư viện API cho các trường thuộc hệ thống CMCSoft IU của CMC",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Dang Phuc <dhp@danghoangphuc.com> (https://danghoangphuc.com)",
+	"license": "MIT",
+	"keywords": [
+		"node",
+		"npm",
+    "kma",
+    "cmcsoft",
+    "iu"
+	],
+	"dependencies": {
+		"axios": "^0.20.0",
+		"axios-cookiejar-support": "^1.0.0",
+		"cheerio": "^1.0.0-rc.3",
+		"md5": "^2.3.0",
+		"node-xlsx": "^0.15.0",
+		"query-string": "^6.13.1",
+		"tough-cookie": "^4.0.0"
+	}
+}
