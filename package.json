@@ -1,6 +1,6 @@
 {
 	"name": "cmcsoft-iu-api",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Thư viện API cho các trường thuộc hệ thống CMCSoft IU của CMC",
 	"main": "index.js",
 	"scripts": {
