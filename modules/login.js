@@ -41,27 +41,34 @@ module.exports = async (username, password, config) => {
 
 		let re = {}
 
-		if (wrongPass == 'Bạn đã nhập sai tên hoặc mật khẩu!') {
+		if (wrongPass == 'Bạn đã nhập sai tên hoặc mật khẩu!' || wrongPass == 'Tên đăng nhập không đúng!') {
 			re = {
 				code: 400,
 				message: 'Sai tên đăng nhập hoặc mật khẩu'
 			}
-		} else if (userFullName != 'khách' && wrongPass != 'Bạn đã nhập sai tên hoặc mật khẩu!') {
-			re = {
-				code: 200,
-				message: 'Đăng nhập thành công !',
-				cookie: cookieJar
-			}
 		} else {
-			re = {
-				code: 500,
-				message: 'Server Error !'
+
+			if (userFullName != 'khách') {
+				re = {
+					code: 200,
+					message: 'Đăng nhập thành công !',
+					cookie: cookieJar
+				}
+			} else {
+				re = {
+					code: 400,
+					message: 'Vui lòng đăng nhập lại !',
+					cookie: cookieJar
+				}
 			}
 		}
-
+		
 		return Promise.resolve(re)
 	} catch (err) {
-		return Promise.reject(err)
+		return Promise.reject({
+			code: 500,
+			message: err
+		})
 	}
 
 }
